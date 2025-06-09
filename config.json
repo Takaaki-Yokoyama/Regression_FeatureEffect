@@ -1,0 +1,14 @@
+{
+  "num_targets": 2,
+  "objectives": [
+    "maximize",
+    "minimize"
+  ],
+  "x_bounds": [
+    [0, 1],
+    [0, 1],
+    [0, 1],
+    [0, 1],
+    [0, 1]
+  ]
+}
