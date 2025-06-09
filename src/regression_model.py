@@ -32,6 +32,10 @@ class RegressionModel:
         return self.model.predict(X)
 
     def predict_from_array(self, x: np.ndarray) -> np.ndarray:
+        # fit時にDataFrameを用いた場合、列名が必要となるためDataFrameに変換
+        if self.feature_names is not None:
+            x_df = pd.DataFrame(x, columns=self.feature_names)
+            return self.model.predict(x_df)
         return self.model.predict(x)
 
     def get_coefficients(self):
