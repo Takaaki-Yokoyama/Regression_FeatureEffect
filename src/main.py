@@ -1,6 +1,7 @@
 import numpy as np
 from pathlib import Path
-from . import data_loader, regression_model, inverse_analysis, visualization
+# 直接実行した際にも読み込めるよう、絶対インポートを使用
+from src import data_loader, regression_model, inverse_analysis, visualization
 
 
 def run(model_name: str = "LinearRegression", feature_idx: int = 0, num_points: int = 50):
